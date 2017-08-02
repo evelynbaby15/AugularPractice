@@ -17,7 +17,8 @@ export class AddFormComponent implements OnInit {
 
   addTodoEvent($event: MouseEvent) {
     this.addTodoItem.emit(this.todoText);
-    console.log('Click btn addTodo.' + $event + ' 輸入的文字為：' + this.todoText);
+    this.todoText = '';
+    // console.log('Click btn addTodo.' + $event + ' 輸入的文字為：' + this.todoText);
   }
 
 }

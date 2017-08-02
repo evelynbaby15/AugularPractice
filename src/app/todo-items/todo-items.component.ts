@@ -19,8 +19,12 @@ export class TodoItemsComponent implements OnInit {
 
   delete(itemId) {
     // TODO 如何把 item 的 id 傳送出去?
-    console.log('delete itemId', itemId);   
+    console.log('delete itemId', itemId);
     this.deletTodoItem.emit(itemId);
+  }
+
+  itemClick(item: TodoItem) {
+    item.done = !item.done;
   }
 
 

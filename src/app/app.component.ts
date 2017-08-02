@@ -32,7 +32,7 @@ export class AppComponent {
     });
   }
 
-  delTodo(id : number) {
+  delTodo(id: number) {
    this.todoItems.forEach( (ele, index) => {
     if(id === ele.id) {
       this.todoItems.splice(index, 1);
