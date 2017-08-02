@@ -16,6 +16,11 @@ export class AddFormComponent implements OnInit {
   }
 
   addTodoEvent($event: MouseEvent) {
+    if(this.todoText === '') {
+      alert ('您忘了輸入點東西啦！');
+      return;
+    }
+
     this.addTodoItem.emit(this.todoText);
     this.todoText = '';
     // console.log('Click btn addTodo.' + $event + ' 輸入的文字為：' + this.todoText);
